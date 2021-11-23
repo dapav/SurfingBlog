@@ -1,0 +1,158 @@
+<!DOCTYPE html>								<!--Πληροφορία για τον Browser τι αρχειό να ανάμενει -->
+<html>									<!--Ξεκίνημα του αρχείου-->
+<title>Surf In Greece</title>						<!--Τιτλος καρτέλας-->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">    <!--Προσαρμογή σε διαφορετικές συσκεύες--> 
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */			                                                <!--Προσαρμογή height του κορμού και του αρχειου 100%-->
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Style tab links */
+.tablink {								<!--Διαμόρφωση και αρχικοποιήση css και συνδέσμων-->
+  background-color: #555;
+  color: white;
+  float:left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 16px 14px;
+  font-size: 17px;
+  width: 25%;
+  
+}
+
+.tablink:hover {
+  background-color: #FFFF00;
+}
+
+
+.tabcontent {										<!-- Προσαρμογη του style σε πληρη οθονη-->
+  color: white;
+  display: none;
+  padding: 80px 150px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+
+a:visited {                                                                             <!--Αλλαγη χρωματος υπερσυνδεσμου-->
+  color: black;
+}
+
+
+#Home {background-color: blue;}								<!--Αρχικοποηση χρωματων για τις σελιδες-->
+#Videos {background-color: green;}
+#Photos {background-color: blue;}
+#About {background-color: green;}
+
+
+</style>
+</head>
+<body>
+
+<button class="tablink" onclick="openPage('Home', this, 'blue')" id="defaultOpen">Home</button>    <!--Δημιουργια μπουτων για ενναλαγη σελιδων-->
+<button class="tablink" onclick="openPage('Videos', this, 'green')">Videos</button>
+<button class="tablink" onclick="openPage('Photos', this, 'blue')">Photos</button>
+<button class="tablink" onclick="openPage('About', this, 'green')">About</button>
+
+<div id="Home" class="tabcontent">
+  <h2 style="color:yellow;">Surf in Greece</h2>                                             <!--Μορφοποιση,προσθεση πολυμέσικων εφαρμογών και εισαγωγη υπερσυνδέσμων στη σελιδα "Home"-->
+  <p>Home is where the waves are...</p>
+  <br>We are small community of surfers,but we are lucky to do the thing we love a walk away from our house</br>
+  <h3 style="color:yellow;">Parga</h3>
+ <p style="color:yellow;">
+		Google location:
+		<a href="https://www.google.com/maps/place/Parga/@39.2853986,20.3905455,14z/data=!3m1!4b1!4m5!3m4!1s0x135c634bf2754a69:0x88f6a4602855c99d!8m2!3d39.2853344!4d20.4005005" 
+                target="_blank">Spot</a></p>
+  <video src="Parga.MP4" controls style:width="200" height="200" autoplay loop muted preload="auto"
+       poster="poster.png" ></video>
+  <p>Although a small town on the west coast <br>it has so much to give to the people who love the sea</br></p>
+  <p style="color:yellow;">For more information <a href="https://www.greeka.com/epirus/parga/" target="_blank"> click here</a></p>
+</div>
+
+
+<div id="Videos" class="tabcontent">							<!--Μορφοποιση,προσθεση πολυμέσικων εφαρμογών και εισαγωγη υπερσυνδέσμων στη σελιδα "Videos"-->
+  <h3 style="color:black;">Here is some action from the spots we love most:</h3>
+  <hr></hr>
+  <video src="Videos/Fall.MP4" controls style:width="250" height="250" autoplay loop muted preload="auto"
+       poster="poster.png"></video>
+  <video src="Videos/ExitTheWaves.MP4" controls style:width="250" height="250" autoplay loop muted preload="auto"
+       poster="poster.png"></video>
+  <video src="Videos/Ride.MP4" controls style:width="250" height="250" autoplay loop muted preload="auto"
+       poster="poster.png"></video>
+  <video src="Videos/intro.MP4" controls style:width="250" height="250" autoplay loop muted preload="auto"
+       poster="poster.png"></video>
+</div>
+
+
+
+<div id="Photos" class="tabcontent">                                                     <!--Μορφοποιση,προσθεση πολυμέσικων εφαρμογών και εισαγωγη υπερσυνδέσμων στη σελιδα "Photos"-->
+  <h2 style="color:black;">Surfing acction by the Venetian Castle:</h2>
+  <hr></hr>
+  <img src="Photo/1.jpg" alt="Image" style="width:30%"> <img src="Photo/2.jpg"  alt="Image" style="width:30%">
+  <img src="Photo/3.jpg" alt="Image" style="width:30%"> <img src="Photo/4.jpg"  alt="Image" style="width:30%">
+  <img src="Photo/5.jpg" alt="Image" style="width:30%"> <img src="Photo/6.jpg"  alt="Image" style="width:30%" height="210">
+  <p style="color:yellow;">About the Castle <a style="color:black;" href="https://www.greeka.com/epirus/parga/sightseeing/parga-castle/" target="_blank"> click here</a></p>
+</div>
+
+<div id="About" class="tabcontent">                                                       <!--Μορφοποιση,προσθεση πολυμέσικων εφαρμογών και εισαγωγη υπερσυνδέσμων στη σελιδα "About"-->
+  <h2 style="color:black;">About</h2>
+  <p style="color:black;">Who we are and what we do?</p>
+  <p>We are <i>definetly</i> not <i>professionals</i>.We just love the sea ,and with surfing we
+     fell in love every day even more.<br></br>We take care of our place,our beaches and our sea!
+     
+   </p>	
+	<hr></hr>
+   <p>Here are some infromation about surfing and how it begun:</p>
+   <a href="https://en.wikipedia.org/wiki/Surfing" target="_blank"> click here</a></p>     <!--Εισαγωγη φορμας στοιχειων και επικοινωνιας μεσω email-->
+	<hr></hr>
+   <p>If you are anywhere close in our beloved place for vacation or you are intrested to taste our kind of fun,do not hesitate to contact:
+     <a href="mailto:daixxx@uom.edu.gr">Send email</a></p>
+   <p>Otherwise,if you wish to get more info leave your details and we will contact with you</p>
+  
+ <form>
+   <label for="fname">First name:</label><br>
+   <input type="text" id="fname" name="fname"><br>
+   <label for="lname">Last name:</label><br>
+   <input type="text" id="lname" name="lname"><br>
+   <label for="fname">Email:</label><br>
+   <input type="text" id="email" name="email"><br>
+   <label for="tel">Tel:</label><br>
+   <input type="text" id="tel" name="tel"><br>
+   <input type="submit" value="Submit">
+   
+</form>
+	
+</div>
+
+<script>										<!-- Script για την επιλογη και ενναλαγη των καρτελων-->
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it				<!--Ανοιγμα αρχικης καρτελας-->
+document.getElementById("defaultOpen").click();
+</script>
+   
+</body>
+</html> 
